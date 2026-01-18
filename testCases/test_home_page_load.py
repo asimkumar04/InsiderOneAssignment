@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from Pages.homepage import home_page
 from testCases.conftest import driver
 
-
+# Verify home page load
 class TestHomePage:
     def test_valid_login(self, driver):
         driver.get("https://insiderone.com")
