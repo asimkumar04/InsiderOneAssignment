@@ -1,0 +1,10 @@
+
+Setting up: chrome driver
+location:
+Istanbul
+location:
+Istanbul
+location:
+Berlin, Germany
+
+Tear down: chrome driver

@@ -1,0 +1,13 @@
+Scenario1 : Validate search functionality performance under normal search.
+
+Scenario2 : Validate search response under sudden search spiike
+
+Scenario3 : Validate performance of advanced search
+
+Scenario4 : Validate caching efficiency and consistency for search functionality
+
+Scenario5 : Validate performance with keyword that return large dataset
+
+Scenario6 : Validate performance of search functionality with wildcards and special character
+
+Scenario7 : Validate search functionality performance when performed continuously for long hours
