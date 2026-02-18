@@ -10,16 +10,16 @@ from testCases.conftest import driver
 # Verify home page load
 class TestHomePage:
     def test_valid_login(self, driver):
-        driver.get("https://insiderone.com")
-        driver.maximize_window()
-        driver.find_element(By.XPATH,home_page.ccokie_btn_xpath).click()
-        time.sleep(2)
+        home = home_page(driver)
+        home.load()
+        home.click_cookies()
+        home.find_tour()
 
         # Page load Validation
         actual_title = driver.title
         print("title:")
         print(actual_title)
-        expected_title = "Insider One | #1 Platform for AI-Powered Customer Engagemen"
+        expected_title = "Insider One | #1 Platform for AI-Powered Customer Engagement"
         if actual_title == expected_title:
             assert True
             driver.close()
@@ -28,3 +28,4 @@ class TestHomePage:
                           attachment_type=AttachmentType.PNG)
             driver.close()
             assert False
+

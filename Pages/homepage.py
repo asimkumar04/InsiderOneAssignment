@@ -1,11 +1,22 @@
 from selenium.webdriver.common.by import By
+from Pages.basepage import BasePage
+
+class home_page(BasePage):
+    ccokie_btn_xpath = (By.XPATH, "//a[@id = 'wt-cli-accept-all-btn']")
+    tour_btn_xpath = (By.XPATH, "//a[contains(text(),'Platform Tour')]")
 
 
-class home_page:
-    ccokie_btn_xpath = "//a[@id = 'wt-cli-accept-all-btn']"
-    tour_btn_xpath = "//a[contains(text(),'Platform Tour')]"
+    def load(self):
+        self.open("https://insiderone.com")
 
-    def __init__(self, driver):
-        self.driver = driver
+    def click_cookies(self):
+        self.click(self.ccokie_btn_xpath)
+
+    def find_tour(self):
+        self.is_visible(self.tour_btn_xpath)
+
+
+
+
 
 
