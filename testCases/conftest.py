@@ -35,6 +35,7 @@ def driver(request):
 
         # Use Selenium Manager (no webdriver-manager needed)
         driver = webdriver.Chrome(options=chrome_options)
+        driver.maximize_window()
 
     elif browser == "firefox":
         # Firefox options setup for headless mode

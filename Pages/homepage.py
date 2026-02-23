@@ -6,8 +6,8 @@ class home_page(BasePage):
     tour_btn_xpath = (By.XPATH, "//a[contains(text(),'Platform Tour')]")
 
 
-    def load(self):
-        self.open("https://insiderone.com")
+    def load(self, base_url: str):
+        self.open(base_url)
 
     def click_cookies(self):
         self.click(self.ccokie_btn_xpath)

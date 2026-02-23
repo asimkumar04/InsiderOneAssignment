@@ -1,4 +1,5 @@
 import time
+from threading import Thread
 
 import allure
 import pytest
@@ -14,15 +15,19 @@ class TestCareersPage:
         career = careers_page(driver)
         career.load()
         career.click_cookie_btn()
+        career.all_qa_job_btn()
 
         career.select_location("Istanbul")
         career.select_department("Quality Assurance")
 
-        result_card = driver.find_elements(By.XPATH,careers_page.result_card_xpath)
+        result_card = driver.find_elements(By.XPATH, career.result_card_xpath)
         for result in result_card:
             location = result.find_element(By.TAG_NAME, "div")
             dep = result.find_element(By.TAG_NAME,"span")
-            if location.text == "Istanbul" and dep.text == "Quality Assurance":
+            print(location.text)
+            print(dep.text)
+
+            if location.text == "Istanbul" or location.text == 'Istanbul, Turkiye' and dep.text == "Quality Assurance":
                 assert True
             else:
                 allure.attach(driver.get_screenshot_as_png(), name="testCareersPage",

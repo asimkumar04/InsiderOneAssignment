@@ -9,7 +9,7 @@ class careers_page(BasePage):
     ccokie_btn_xpath = (By.XPATH,"//a[@id = 'wt-cli-accept-all-btn']")
     filter_by_location_id = (By.ID,"filter-by-location")
     filter_by_department_id = (By.ID,"filter-by-department")
-    result_card_xpath = (By.XPATH,"//div[@class='position-list-item-wrapper bg-light']")
+    result_card_xpath = "//div[@class='position-list-item-wrapper bg-light']"
     result_card_departemnt = (By.XPATH,"//div[@class='position-list-item-wrapper bg-light']/span")
     result_card_location = (By.XPATH,"//div[@class='position-list-item-wrapper bg-light']/div")
     view_role_btn_xpath = (By.XPATH,"//a[contains(text(),'View Role')]")
